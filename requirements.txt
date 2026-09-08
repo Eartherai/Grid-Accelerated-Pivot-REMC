@@ -1,0 +1,9 @@
+# Runtime dependencies for the HP folding solver.
+# Pins match the environment used for the published 10-hour run
+# (Lightning AI A100-40GB instance, 4 CPU cores, Python 3.12).
+numpy>=1.22,<3
+numba>=0.59,<0.66
+matplotlib>=3.5,<4      # figures only; the solver runs without it
+
+# Development / CI
+pytest>=7.0
