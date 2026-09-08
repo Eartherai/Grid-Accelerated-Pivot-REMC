@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/OWNER/REPO/actions/workflows/ci.yml"><img src="https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/Eartherai/Grid-Accelerated-Pivot-REMC/actions/workflows/ci.yml"><img src="https://github.com/Eartherai/Grid-Accelerated-Pivot-REMC/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://openreview.net/forum?id=yfMz2KaNJp"><img src="https://img.shields.io/badge/paper-OpenReview-b31b1b.svg" alt="Paper"></a>
   <a href="https://caisc2026.github.io/accepted_papers.html"><img src="https://img.shields.io/badge/CAISc%202026-accepted-6f42c1.svg" alt="Accepted at CAISc 2026"></a>
   <img src="https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12-3776ab.svg" alt="Python 3.10-3.12">
@@ -331,8 +331,8 @@ to be lattice-*adjacent*, not diagonal.
 Requires Python 3.10–3.12. Numba does the heavy lifting; the solver is CPU-only.
 
 ```bash
-git clone https://github.com/OWNER/REPO.git
-cd REPO
+git clone https://github.com/Eartherai/Grid-Accelerated-Pivot-REMC.git
+cd Grid-Accelerated-Pivot-REMC
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -454,6 +454,7 @@ train.py           Search driver: budgeted SA/REMC rounds, checkpointing, submis
 predict.py         Fold a sequence, or re-score a stored fold
 analyze.py         Rebuild the results table, figures and banner from coordinates
 test_model.py      41 tests: model invariants, dead-operator proofs, result integrity
+requirements.txt   Pinned dependencies (numpy, numba, matplotlib, pytest)
 
 assets/            The paper's eight figures at source resolution, plus the banner
 results/           Submission coordinates (S5-S10) and the verification artifact
@@ -566,4 +567,3 @@ operator ever fires.
 ## License
 
 [MIT](LICENSE) © 2026 Daksh Rathod, Khamir Desai.
-# Grid-Accelerated-Pivot-REMC
