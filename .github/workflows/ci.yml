@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: tests (py${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run test suite
+        run: pytest -q
+
+      - name: Re-score every committed fold
+        # Recomputes contacts from the coordinate files with the pure-Python
+        # scorer and fails if any fold is not a valid self-avoiding walk.
+        run: python analyze.py --check
+
+      - name: Verify the headline result
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          from datasets import SEQUENCES, SUBMIT_IDS
+          from model import contact_count
+          total = sum(
+              contact_count(
+                  SEQUENCES[s]["sequence"],
+                  json.loads(pathlib.Path(f"checkpoints/best_{s}.json").read_text())["coords"],
+              )
+              for s in SUBMIT_IDS
+          )
+          target = sum(SEQUENCES[s]["best"] for s in SUBMIT_IDS)
+          print(f"{total}/{target} = {100 * total / target:.1f}% of best known")
+          assert (total, target) == (212, 225), "README results table is stale"
+          PY
+
+      - name: Smoke-run the solver end to end
+        # Exercises the full train -> checkpoint -> submission path on a copy,
+        # so the committed results are never overwritten by CI.
+        run: |
+          mkdir -p /tmp/smoke && cp -r *.py requirements.txt /tmp/smoke/
+          cd /tmp/smoke
+          python train.py --smoke --seq S1 --hours 0.01 --workers 2 --no-resume \
+                          --no-strict-official-check
+          python predict.py --score results/S1_submission.json
+
+  live-data:
+    # The solver refuses to run if the benchmark sequences have drifted from the
+    # official JSON. This job checks that separately, so a network hiccup or an
+    # upstream edit shows up as its own signal instead of failing every test.
+    name: benchmark snapshot vs live CAISc JSON
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install numpy
+      - run: python -c "import datasets; datasets.check_official_problem_data(strict=True)"
