@@ -183,12 +183,12 @@ def plot_banner(rows, out_path: Path = ASSET_DIR / "banner.png", dpi: int = 200)
     ax = fig.add_axes([0.05, 0.0, 0.58, 1.0])
     ax.set_facecolor(bg)
     ax.axis("off")
-    ax.text(0, 0.795, "Revisiting HP Protein Folding", color=fg,
+    ax.text(0, 0.800, "Grid-Accelerated Pivot REMC", color=fg,
             fontsize=26, fontweight="bold", va="center", ha="left")
-    ax.text(0, 0.615, "Move-Set Ablation and Grid-Accelerated Pivots",
-            color=fg, fontsize=14, va="center", ha="left")
-    ax.text(0, 0.485, "for REMC on the 2D Square Lattice",
-            color=fg, fontsize=14, va="center", ha="left")
+    ax.text(0, 0.620, "for HP Protein Folding on the 2D Square Lattice",
+            color=fg, fontsize=14.5, va="center", ha="left")
+    ax.text(0, 0.487, "Daksh Rathod   ·   Khamir Desai",
+            color=muted, fontsize=12.5, va="center", ha="left")
     ax.plot([0, 0.30], [0.345, 0.345], color=accent, lw=2.2,
             solid_capstyle="butt")
     total = sum(r["contacts"] for r in rows if r["contacts"] is not None)

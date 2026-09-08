@@ -1,20 +1,27 @@
 cff-version: 1.2.0
 message: If you use this software or its results, please cite the paper below.
-title: "Revisiting HP Protein Folding: Move-Set Ablation and Grid-Accelerated Pivots for REMC on the 2D Square Lattice"
-# The submission PDF on OpenReview is anonymised, so the author list is not
-# recoverable from it. Fill in the placeholder below with the names exactly as
-# they appear on the OpenReview forum page, then delete this comment.
+title: "Grid-Accelerated Pivot REMC for HP Protein Folding on the 2D Square Lattice"
 authors:
-  - name: AUTHOR_NAME
+  - family-names: Rathod
+    given-names: Daksh
+    affiliation: Dhirubhai Ambani University, Gandhinagar, Gujarat, India
+    email: daksh.hiteshkumar.rathod@gmail.com
+  - family-names: Desai
+    given-names: Khamir
+    affiliation: Sarvajanik College of Engineering & Technology, Surat, Gujarat, India
+    email: khamir.desai.s@gmail.com
 type: software
 license: MIT
 repository-code: "https://github.com/OWNER/REPO"
 abstract: >-
   A replica-exchange Monte Carlo solver for the 2D HP protein folding problem,
-  combining six move operators with grid-based pivot collision detection. On the
-  CAISc 2026 benchmark suite (S5-S10, lengths 48-100) it matches the best-known
-  23 contacts on S5 and reaches 212 of 225 best-known contacts (94.2%) in a
-  single 10-hour CPU run.
+  combining six move operators with grid-based pivot collision detection. A
+  controlled ablation shows pivot rotations account for about 80% of the
+  improvement over local-move-only search, and a controlled comparison against
+  16,384 concurrent independent GPU annealing chains shows that raw parallelism
+  does not substitute for replica exchange. On the CAISc 2026 benchmark suite
+  (S5-S10, lengths 48-100) the solver matches the best-known 23 contacts on S5
+  and reaches 212 of 225 best-known contacts (94.2%) in a single 10-hour run.
 keywords:
   - protein folding
   - HP model
@@ -24,9 +31,12 @@ keywords:
   - combinatorial optimization
 preferred-citation:
   type: conference-paper
-  title: "Revisiting HP Protein Folding: Move-Set Ablation and Grid-Accelerated Pivots for REMC on the 2D Square Lattice"
+  title: "Grid-Accelerated Pivot REMC for HP Protein Folding on the 2D Square Lattice"
   authors:
-    - name: AUTHOR_NAME
+    - family-names: Rathod
+      given-names: Daksh
+    - family-names: Desai
+      given-names: Khamir
   collection-title: Proceedings of the 1st Conference for AI Scientists (CAISc)
   year: 2026
   url: "https://openreview.net/forum?id=yfMz2KaNJp"
