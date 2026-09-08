@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: If you use this software or its results, please cite the paper below.
 title: "Revisiting HP Protein Folding: Move-Set Ablation and Grid-Accelerated Pivots for REMC on the 2D Square Lattice"
 # The submission PDF on OpenReview is anonymised, so the author list is not
-# recoverable from it. Replace AUTHOR_NAME below with the names exactly as they
-# appear on the OpenReview forum page, then delete this comment.
+# recoverable from it. Fill in the placeholder below with the names exactly as
+# they appear on the OpenReview forum page, then delete this comment.
 authors:
   - name: AUTHOR_NAME
 type: software

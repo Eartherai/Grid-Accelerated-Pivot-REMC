@@ -429,12 +429,12 @@ in favour of `requirements.txt`.
 
 ## Citation
 
-<!-- TODO: replace AUTHOR_NAME with the author list exactly as it appears on the
-     OpenReview forum page. The submission PDF is anonymised, so the name is not
-     recoverable from it. Also update CITATION.cff and LICENSE. -->
+<!-- TODO: fill in the author list exactly as it appears on the OpenReview forum
+     page. The submission PDF is anonymised, so the name is not recoverable from
+     it. The same placeholder appears in CITATION.cff and LICENSE. -->
 
 ```bibtex
-@inproceedings{AUTHOR_NAME2026hpfolding,
+@inproceedings{hpfolding2026,
   title     = {Revisiting {HP} Protein Folding: Move-Set Ablation and
                Grid-Accelerated Pivots for {REMC} on the {2D} Square Lattice},
   author    = {AUTHOR_NAME},
