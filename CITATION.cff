@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: If you use this software or its results, please cite the paper below.
+title: "Revisiting HP Protein Folding: Move-Set Ablation and Grid-Accelerated Pivots for REMC on the 2D Square Lattice"
+# The submission PDF on OpenReview is anonymised, so the author list is not
+# recoverable from it. Replace AUTHOR_NAME below with the names exactly as they
+# appear on the OpenReview forum page, then delete this comment.
+authors:
+  - name: AUTHOR_NAME
+type: software
+license: MIT
+repository-code: "https://github.com/OWNER/REPO"
+abstract: >-
+  A replica-exchange Monte Carlo solver for the 2D HP protein folding problem,
+  combining six move operators with grid-based pivot collision detection. On the
+  CAISc 2026 benchmark suite (S5-S10, lengths 48-100) it matches the best-known
+  23 contacts on S5 and reaches 212 of 225 best-known contacts (94.2%) in a
+  single 10-hour CPU run.
+keywords:
+  - protein folding
+  - HP model
+  - lattice protein
+  - replica exchange Monte Carlo
+  - simulated annealing
+  - combinatorial optimization
+preferred-citation:
+  type: conference-paper
+  title: "Revisiting HP Protein Folding: Move-Set Ablation and Grid-Accelerated Pivots for REMC on the 2D Square Lattice"
+  authors:
+    - name: AUTHOR_NAME
+  collection-title: Proceedings of the 1st Conference for AI Scientists (CAISc)
+  year: 2026
+  url: "https://openreview.net/forum?id=yfMz2KaNJp"
