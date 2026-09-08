@@ -1,0 +1,98 @@
+{
+  "conference": "CAISc 2026",
+  "track": "HP Protein Folding",
+  "method": "Wang-Landau-style REMC + Pivot + Cascade Pull + Bond Rebridging",
+  "timestamp": "2026-05-29T12:02:01Z",
+  "results": [
+    {
+      "sequence_id": "S1",
+      "lattice": "2D",
+      "sequence": "HPHPPHHPHPPHPHHPPHPH",
+      "length": 20,
+      "contacts": 9,
+      "target": 9,
+      "status": "MATCHED"
+    },
+    {
+      "sequence_id": "S2",
+      "lattice": "2D",
+      "sequence": "HHPPHPPHPPHPPHPPHPPHPPHH",
+      "length": 24,
+      "contacts": 9,
+      "target": 9,
+      "status": "MATCHED"
+    },
+    {
+      "sequence_id": "S3",
+      "lattice": "2D",
+      "sequence": "PPHPPHHPPPPHHPPPPHHPPPPHH",
+      "length": 25,
+      "contacts": 8,
+      "target": 8,
+      "status": "MATCHED"
+    },
+    {
+      "sequence_id": "S4",
+      "lattice": "2D",
+      "sequence": "PPPHHPPHHPPPPPHHHHHHHPPHHPPPPHHPPHPP",
+      "length": 36,
+      "contacts": 14,
+      "target": 14,
+      "status": "MATCHED"
+    },
+    {
+      "sequence_id": "S5",
+      "lattice": "2D",
+      "sequence": "PPHPPHHPPHHPPPPPHHHHHHHHHHPPPPPPHHPPHHPPHPPHHHHH",
+      "length": 48,
+      "contacts": 22,
+      "target": 23,
+      "status": "gap=1"
+    },
+    {
+      "sequence_id": "S6",
+      "lattice": "2D",
+      "sequence": "PPHPPHPHPHHHHPHPPPHPPPHPPPPHPPPHPPPHPHHHHPHPHPHPHH",
+      "length": 50,
+      "contacts": 19,
+      "target": 21,
+      "status": "gap=2"
+    },
+    {
+      "sequence_id": "S7",
+      "lattice": "2D",
+      "sequence": "PPHHHPHHHHHHHHPPPHHHHHHHHHHPHPPPHHHHHHHHHHHHPPPPHHHHHHPPHHHPHHH",
+      "length": 63,
+      "contacts": 36,
+      "target": 36,
+      "status": "MATCHED"
+    },
+    {
+      "sequence_id": "S8",
+      "lattice": "2D",
+      "sequence": "HHHHHHHHHHHHPHPHPPHHPPHHPPHPPHHPPHHPPHPPHHPPHHPPHPHPHHHHHHHHHHHH",
+      "length": 64,
+      "contacts": 36,
+      "target": 42,
+      "status": "gap=6"
+    },
+    {
+      "sequence_id": "S9",
+      "lattice": "2D",
+      "sequence": "HHHHPPPPHHHHHHHHHHHHPPPPPPHHHHHHHHHHHHPPPHHHHHHHHHHHHPPPHHHHHHHHHHHHPPPHPPHHPPHHPPHPH",
+      "length": 85,
+      "contacts": 49,
+      "target": 53,
+      "status": "gap=4"
+    },
+    {
+      "sequence_id": "S10",
+      "lattice": "2D",
+      "sequence": "PPPPPPHPHHPPPPPHHHPHHHHPHHPPHHHPPHHPPHPPPPPPPHPPHPPPHHHHHPPHPHHPHHPHHPHPHPHHPPPPPPPHPHHHHPHPHHPHPPHP",
+      "length": 100,
+      "contacts": 38,
+      "target": 48,
+      "status": "gap=10"
+    }
+  ]
+}
