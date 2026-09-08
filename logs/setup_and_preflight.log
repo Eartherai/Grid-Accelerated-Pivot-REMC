@@ -1,0 +1,21 @@
+# Environment setup + pre-flight checks, verbatim from the notebook.
+# The solver aborts before spending any budget if the local sequence snapshot
+# disagrees with the live CAISc problem JSON.
+
+[setup] numba missing; installing numba with pip
+Collecting numba
+  Downloading numba-0.65.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.9 kB)
+Collecting llvmlite<0.48,>=0.47.0dev0 (from numba)
+  Downloading llvmlite-0.47.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.0 kB)
+Requirement already satisfied: numpy>=1.22 in /home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages (from numba) (1.26.4)
+Downloading numba-0.65.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 126.4 MB/s  0:00:00
+Downloading llvmlite-0.47.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (56.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 94.6 MB/s  0:00:00m eta 0:00:01
+Installing collected packages: llvmlite, numba
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2/2 [numba]32m1/2 [numba]
+Successfully installed llvmlite-0.47.0 numba-0.65.1
+
+[official-check] OK: local sequences/targets match live CAISc JSON
+[self-test] starting
+[self-test] OK
