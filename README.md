@@ -177,7 +177,7 @@ Four solver variants, each run for 500K SA steps with 10 independent seeds:
 On S9 (n = 85), removing pivots drops mean contacts from **41.6 to 25.3**, a 39% decrease.
 Adding pivots alone recovers 12.6 of the 16.3 total improvement — **77%**. Local moves
 contribute the remaining 3.7 by fine-tuning residue positions within the topology that
-pivots discovered.
+pivots discovered. 
 
 The ablation deliberately uses a restricted single-CPU setting — one SA chain, 500K steps,
 10 seeds — to isolate operator contributions under identical conditions. Its absolute
