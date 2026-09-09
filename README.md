@@ -13,7 +13,7 @@
 
 # Grid-Accelerated Pivot REMC for HP Protein Folding on the 2D Square Lattice
 
-**[Daksh Rathod](mailto:daksh.hiteshkumar.rathod@gmail.com)**¹ · **[Khamir Desai](mailto:khamir.desai.s@gmail.com)**²
+[Daksh Rathod](mailto:daksh.hiteshkumar.rathod@gmail.com)¹ · [Khamir Desai](mailto:khamir.desai.s@gmail.com)²
 <sub>¹ Dhirubhai Ambani University, Gandhinagar, Gujarat, India &nbsp;·&nbsp; ² Sarvajanik College of Engineering & Technology, Surat, Gujarat, India</sub>
 
 📄 [OpenReview](https://openreview.net/forum?id=yfMz2KaNJp) ·
